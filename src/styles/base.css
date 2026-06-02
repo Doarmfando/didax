@@ -1,0 +1,193 @@
+:root {
+  color-scheme: light;
+  --ink: #111315;
+  --ink-2: #24282c;
+  --muted: #616a73;
+  --line: #dfe4e8;
+  --paper: #ffffff;
+  --soft: #f5f7f8;
+  --soft-2: #edf1f3;
+  --gold: #d8932d;
+  --gold-2: #f2b24b;
+  --green: #1f8f5f;
+  --yellow: #d5ad25;
+  --blue: #276c95;
+  --danger: #ad4b35;
+  --shadow: 0 18px 48px rgba(17, 19, 21, 0.12);
+  --radius: 8px;
+  --radius-sm: 6px;
+  --container: 1180px;
+  --header-height: 76px;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 860px;
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  color: var(--muted);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(216, 147, 45, 0.55);
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+.narrow {
+  width: min(calc(100% - 40px), 820px);
+}
+
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 16px;
+  z-index: 1000;
+  padding: 10px 14px;
+  color: var(--paper);
+  background: var(--ink);
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.lead {
+  color: var(--ink-2);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.muted-line {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: line-through;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container,
+  .narrow {
+    width: min(calc(100% - 28px), var(--container));
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}

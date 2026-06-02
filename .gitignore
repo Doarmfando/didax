@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+public/api/vendor/
 
 # Production build
 dist/
@@ -46,3 +47,4 @@ desktop.ini
 # Temporary files
 *.tmp
 *.temp
+*.php~

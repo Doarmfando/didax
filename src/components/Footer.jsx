@@ -63,7 +63,7 @@ export default function Footer() {
         <p>© 2026 DIDAX</p>
         <div className="social-row" aria-label="Redes sociales">
           {brand.social.map((item) => (
-            <a key={item.id} href={item.url} aria-label={`Abrir ${item.label}`} title={item.label}>
+            <a key={item.id} href={item.url} aria-label={`Abrir ${item.label}`} title={item.label} target="_blank" rel="noreferrer">
               <SocialIcon id={item.id} />
             </a>
           ))}

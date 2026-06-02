@@ -1,35 +1,34 @@
 import { Mail, MessageCircle, Send } from "lucide-react";
+import { useState } from "react";
 import ButtonLink from "../components/ButtonLink.jsx";
 import Seo from "../components/Seo.jsx";
 import SocialIcon from "../components/SocialIcon.jsx";
 import { brand, whatsappUrl } from "../data/site.js";
 
 export default function Contact() {
-  const handleSubmit = (event) => {
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error | ratelimit
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setStatus("sending");
 
     const formData = new FormData(event.currentTarget);
-    const values = Object.fromEntries(formData.entries());
-    const subject = "Nueva consulta desde didax.tech";
-    const body = [
-      "Hola DIDAX,",
-      "",
-      "Quiero solicitar informacion con estos datos:",
-      "",
-      `Nombres: ${values.nombres}`,
-      `Apellidos: ${values.apellidos}`,
-      `Numero: ${values.numero}`,
-      `Correo electronico: ${values.correo}`,
-      "",
-      "Consulta:",
-      values.consulta,
-      "",
-      "Enviado desde el formulario de contacto de didax.tech.",
-    ].join("\n");
 
-    window.location.href = `mailto:${brand.email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
+    try {
+      const res = await fetch("/api/contact.php", { method: "POST", body: formData });
+      const data = await res.json();
+      if (data.ok) {
+        setStatus("success");
+        event.target.reset();
+      } else {
+        setErrorMsg(data.message || "No se pudo enviar el mensaje.");
+        setStatus("error");
+      }
+    } catch {
+      setErrorMsg("No se pudo enviar el mensaje.");
+      setStatus("error");
+    }
   };
 
   return (
@@ -64,7 +63,7 @@ export default function Contact() {
             </a>
             <div className="social-row social-row--wrap">
               {brand.social.map((item) => (
-                <a key={item.id} href={item.url} aria-label={`Abrir ${item.label}`} title={item.label}>
+                <a key={item.id} href={item.url} aria-label={`Abrir ${item.label}`} title={item.label} target="_blank" rel="noreferrer">
                   <SocialIcon id={item.id} />
                 </a>
               ))}
@@ -99,9 +98,24 @@ export default function Contact() {
               Consulta
               <textarea name="consulta" rows="6" required />
             </label>
-            <button className="button button--primary" type="submit">
-              Enviar
-              <Send size={18} />
+            {status === "success" && (
+              <p className="form-feedback form-feedback--ok">
+                ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="form-feedback form-feedback--error">
+                {errorMsg} Intenta por{" "}
+                <a href={whatsappUrl()} target="_blank" rel="noreferrer">WhatsApp</a>.
+              </p>
+            )}
+            <button
+              className="button button--primary"
+              type="submit"
+              disabled={status === "sending" || status === "success"}
+            >
+              {status === "sending" ? "Enviando…" : "Enviar"}
+              {status !== "sending" && <Send size={18} />}
             </button>
           </form>
         </div>

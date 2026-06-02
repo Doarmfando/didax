@@ -129,19 +129,62 @@ La pagina de contacto usa un formulario controlado en `src/pages/Contact.jsx`.
 
 Cuando el usuario envia el formulario:
 
-1. React captura los datos.
-2. Se arma un asunto y cuerpo de correo formateado.
-3. Se abre el cliente de correo del usuario con `mailto:`.
+1. React hace un `fetch POST` a `/api/contact.php` con los datos del formulario.
+2. PHP valida los campos y envia el correo via SMTP con PHPMailer.
+3. El correo llega directamente a `jmontenegro@didax.tech`.
+4. React muestra mensaje de exito o error segun la respuesta.
 
-Esto evita el formato crudo del navegador:
+### Backend PHP
 
 ```txt
-nombres=...
-apellidos=...
-numero=...
+public/
+  api/
+    contact.php       <- endpoint de envio
+    composer.json     <- dependencia PHPMailer
+    vendor/           <- generado con: composer install (no subir a git)
 ```
 
-Formato actual del correo:
+Instalar dependencias (una vez, dentro de public/api/):
+
+```bash
+cd public/api
+composer install
+```
+
+Configuracion SMTP en `contact.php`:
+- Host: smtp.gmail.com
+- Puerto: 587 (STARTTLS)
+- Usuario: jmontenegro@didax.tech
+- Contrasena: App Password de Google (ver pendientes abajo)
+
+Nota: el correo jmontenegro@didax.tech esta en Google Workspace (confirmado por MX records).
+No esta en Hostinger. El hosting solo aloja el sitio web.
+
+### Pendientes para produccion
+
+1. Julio genera su App Password:
+   - Entrar a myaccount.google.com con jmontenegro@didax.tech
+   - Seguridad → Verificacion en 2 pasos (activar si no esta)
+   - Contraseñas de aplicaciones → Crear → copiar clave de 16 caracteres
+
+2. En `public/api/contact.php` reemplazar:
+   - `$mail->Username` → jmontenegro@didax.tech
+   - `$mail->Password` → App Password de Julio
+   - `$mail->setFrom` → jmontenegro@didax.tech
+   - `$mail->addAddress` → jmontenegro@didax.tech
+
+3. Quitar las lineas de debug del PHP:
+   ```php
+   ini_set('display_errors', 1);
+   error_reporting(E_ALL);
+   ```
+
+4. Correr build y subir dist/ a Hostinger:
+   ```bash
+   npm.cmd run build
+   ```
+
+Formato del correo enviado:
 
 ```txt
 Hola DIDAX,
@@ -158,8 +201,6 @@ Consulta:
 
 Enviado desde el formulario de contacto de didax.tech.
 ```
-
-Nota: para enviar correos sin abrir cliente de correo se necesita backend, PHP en Hostinger, Formspree o un servicio similar.
 
 ## WhatsApp
 

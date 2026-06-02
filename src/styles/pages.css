@@ -983,6 +983,24 @@
   background: var(--paper);
 }
 
+.form-feedback {
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+.form-feedback--ok {
+  background: #e6f4ea;
+  color: #1e6b34;
+  border: 1px solid #a8d5b5;
+}
+
+.form-feedback--error {
+  background: #fdecea;
+  color: #b71c1c;
+  border: 1px solid #f5c2c0;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

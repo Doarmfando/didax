@@ -7,4 +7,9 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     cssCodeSplit: true,
   },
+  server: {
+    proxy: {
+      '/api': 'http://localhost:8080',
+    },
+  },
 });

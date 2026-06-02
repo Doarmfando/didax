@@ -54,8 +54,7 @@ export default function Home() {
             <p className="eyebrow">Cursos, consultoría e implementación tecnológica</p>
             <h1>La brecha entre tu conocimiento actual y lo que el mercado exige</h1>
             <p>
-              DIDAX impulsa profesionales y empresas con formación práctica,
-              consultoría especializada e implementación de soluciones tecnológicas.
+DIDAX impulsa a profesionales y empresas mediante formación práctica, junto con consultoría especializada.
             </p>
             <div className="button-row">
               <ButtonLink href={whatsappUrl()} target="_blank" rel="noreferrer">

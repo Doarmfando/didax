@@ -65,7 +65,7 @@ const benefits = [
 export const courses = {
   excel: {
     slug: "excel",
-    eyebrow: "Excel a Nivel Elite",
+    eyebrow: "Excel",
     title: "Curso de Excel Nivel Élite",
     summary:
       "Domina Excel desde cero hasta el nivel avanzado con una especialización práctica de 48 horas y una ruta intensiva de 24 horas.",
@@ -144,7 +144,7 @@ export const courses = {
   },
   powerbi: {
     slug: "powerbi",
-    eyebrow: "Power BI a Nivel Elite",
+    eyebrow: "Power BI",
     title: "Curso de Power BI Nivel Élite",
     summary:
       "Evoluciona tu análisis de datos con una especialización preparada para dashboards gerenciales y decisiones estratégicas.",

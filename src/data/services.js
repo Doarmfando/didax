@@ -1,3 +1,13 @@
+import seguridadSaludImg from "../../img/services/seguridad-salud.jpg";
+import logisticaComprasImg from "../../img/services/logistica-compras.jpg";
+import gestionHumanaImg from "../../img/services/gestion-humana.jpg";
+import controlFugasImg from "../../img/services/control-fugas.jpg";
+import inteligenciaComercialImg from "../../img/services/inteligencia-comercial.jpg";
+import controlCalidadImg from "../../img/services/control-calidad.jpg";
+import costosRentabilidadImg from "../../img/services/costos-rentabilidad.jpg";
+
+
+
 export const valueProps = [
   {
     title: "El atajo que nadie te dio",
@@ -22,6 +32,7 @@ export const benefits = [
 export const companyServices = [
   {
     title: "Seguridad y Salud en el Trabajo",
+    image: seguridadSaludImg,
     problem: "Incumplimiento de normativas que exponen a accidentes laborales y multas.",
     solution:
       "Implementación y auditoría del sistema de seguridad laboral según normativa vigente.",
@@ -30,6 +41,7 @@ export const companyServices = [
   },
   {
     title: "Optimización de Logística y Compras",
+    image: logisticaComprasImg,
     problem: "Stock parado, pérdidas de ventas o compras sin criterio claro.",
     solution: "Gestión inteligente de inventarios y cadena de suministro.",
     impact:
@@ -37,6 +49,7 @@ export const companyServices = [
   },
   {
     title: "Gestión Humana y Productividad",
+    image: gestionHumanaImg,
     problem:
       "Alta rotación, desorden en planillas o falta de indicadores de desempeño.",
     solution:
@@ -45,6 +58,7 @@ export const companyServices = [
   },
   {
     title: "Blindaje de Utilidades / Control de Fugas",
+    image: controlFugasImg,
     problem: "Mermas, gastos hormiga o inventarios que no cuadran.",
     solution: "Tableros de control en tiempo real.",
     impact:
@@ -52,6 +66,7 @@ export const companyServices = [
   },
   {
     title: "Inteligencia Comercial / Aumento de Ventas",
+    image: inteligenciaComercialImg,
     problem:
       "Inversión en publicidad o ventas sin saber qué cliente o producto deja más margen.",
     solution: "Analítica avanzada de ventas y segmentación.",
@@ -59,12 +74,14 @@ export const companyServices = [
   },
   {
     title: "Gestión y Control de Calidad",
+    image: controlCalidadImg,
     problem: "Productos defectuosos, reprocesos y clientes insatisfechos.",
     solution: "Protocolos de control de calidad y estandarización de procesos.",
     impact: "Reducción de hasta 25% en costos de reproceso.",
   },
   {
     title: "Control de Costos y Rentabilidad",
+    image: costosRentabilidadImg,
     problem:
       "Precios calculados sin conocer el costo real de fabricación, costos indirectos o punto de equilibrio.",
     solution: "Sistemas de costeo industrial, análisis de márgenes y contribución.",

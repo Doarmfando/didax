@@ -51,7 +51,7 @@ export default function About() {
               procesos e indicadores de gestión. Más de 15 años de experiencia
               en el sector privado y más de 5 años como docente.
             </p>
-            <ButtonLink href="#" variant="secondary" aria-label="LinkedIn de Julio Montenegro">
+            <ButtonLink href="https://www.linkedin.com/in/julio-percy-montenegro-flores-30a23413a/" variant="secondary" aria-label="LinkedIn de Julio Montenegro">
               <Linkedin size={18} />
               LinkedIn
             </ButtonLink>

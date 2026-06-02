@@ -150,7 +150,7 @@ export const courses = {
       "Evoluciona tu análisis de datos con una especialización preparada para dashboards gerenciales y decisiones estratégicas.",
     description:
       "Aprende a conectar múltiples fuentes, automatizar tableros interactivos y transformar números complejos en decisiones claras para tu empresa.",
-    videoUrl: "https://www.youtube.com/watch?v=VIDEO_POWER_BI_PENDIENTE",
+    videoUrl: "https://www.youtube.com/watch?v=45wLevkbIB4",
     cover: images.powerbiCoverPlaceholder,
     whatsappMessage: "Hola, quiero más información del Curso de Power BI Nivel Élite",
     editableNotice: "Contenido editable pendiente de validación final del cliente.",

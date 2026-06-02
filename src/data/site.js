@@ -13,11 +13,11 @@ export const brand = {
   whatsappMessage: "Hola, necesito más información",
   logo,
   social: [
-    { id: "facebook", label: "facebook", url: "#" },
-    { id: "instagram", label: "instagram", url: "#" },
-    { id: "youtube", label: "youtube", url: "#" },
-    { id: "linkedin", label: "linkedin", url: "#" },
-    { id: "tiktok", label: "tiktok", url: "#" },
+    { id: "facebook", label: "facebook", url: "https://www.facebook.com/profile.php?id=61586054381486" },
+    { id: "instagram", label: "instagram", url: "https://www.instagram.com/didax_peru/" },
+    { id: "youtube", label: "youtube", url: "https://www.youtube.com/@Didax-c8q" },
+    { id: "linkedin", label: "linkedin", url: "https://www.linkedin.com/in/julio-percy-montenegro-flores-30a23413a/" },
+    { id: "tiktok", label: "tiktok", url: "https://www.tiktok.com/@didax_peru" },
   ],
 };
 

@@ -1,4 +1,4 @@
-import { ArrowRight, Factory, Gauge, ShieldCheck } from "lucide-react";
+import { ArrowRight, Factory, Gauge } from "lucide-react";
 import ButtonLink from "../components/ButtonLink.jsx";
 import CtaBand from "../components/CtaBand.jsx";
 import SectionHeader from "../components/SectionHeader.jsx";
@@ -59,7 +59,7 @@ export default function Companies() {
             text="Este bloque está preparado para colocar el video comercial final de DIDAX."
           />
           <YouTubeLite
-            url="https://www.youtube.com/watch?v=VIDEO_EMPRESAS_PENDIENTE"
+            url="https://www.youtube.com/watch?v=SJ2QIjJbIiI"
             title="Servicios empresariales DIDAX"
             cover={images.companiesPlaceholder}
           />
@@ -73,30 +73,49 @@ export default function Companies() {
             title="Servicios diseñados desde el problema hasta el impacto"
             text="Cada servicio identifica la fricción operativa, plantea una solución y enfoca el retorno esperado."
           />
+
+
           <div className="service-grid">
             {companyServices.map((service) => (
               <article className="service-card" key={service.title}>
-                <div className="service-card__head">
-                  <ShieldCheck size={24} />
-                  <h2>{service.title}</h2>
+                <div className="service-card__image">
+                  <img src={service.image} alt={service.title} loading="lazy" />
+                  <span className="service-card__number" aria-hidden="true" />
                 </div>
-                <dl>
-                  <div>
-                    <dt>El problema</dt>
-                    <dd>{service.problem}</dd>
+
+                <div className="service-card__body">
+
+                  <div className="service-card__head">
+                    <span className="service-card__marker" aria-hidden="true" />
+
+                    <div>
+                      <span className="service-card__eyebrow">Intervención empresarial</span>
+                      <h2>{service.title}</h2>
+                    </div>
                   </div>
-                  <div>
-                    <dt>Nuestra solución</dt>
-                    <dd>{service.solution}</dd>
-                  </div>
-                  <div>
-                    <dt>Impacto / ROI</dt>
-                    <dd>{service.impact}</dd>
-                  </div>
-                </dl>
+
+                  <dl className="service-card__details">
+                    <div>
+                      <dt>Problema</dt>
+                      <dd>{service.problem}</dd>
+                    </div>
+
+                    <div>
+                      <dt>Solución</dt>
+                      <dd>{service.solution}</dd>
+                    </div>
+
+                    <div className="service-card__impact">
+                      <dt>Impacto / ROI</dt>
+                      <dd>{service.impact}</dd>
+                    </div>
+                  </dl>
+                </div>
               </article>
             ))}
           </div>
+
+
         </div>
       </section>
 

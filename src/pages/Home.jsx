@@ -68,7 +68,7 @@ DIDAX impulsa a profesionales y empresas mediante formación práctica, junto co
           </div>
 
           <div className="hero-visual" aria-label="DIDAX capacitación tecnológica">
-            <img src={brand.logo} alt="Logo DIDAX" />
+            <img src={brand.logo} alt="Logo DIDAX" fetchpriority="high" />
             <div className="metric-strip">
               <span>DIDAX</span>
               <div className="hero-tools" aria-label="Excel, Power BI y Consultoría">

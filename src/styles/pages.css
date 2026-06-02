@@ -1176,3 +1176,96 @@ textarea {
     justify-self: start;
   }
 }
+.course-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.course-hub-card {
+  position: relative;
+  overflow: hidden;
+  padding: 34px;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+
+.course-hub-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 6px;
+}
+
+.course-hub-card--excel::before {
+  background: linear-gradient(90deg, #16a34a, #86efac);
+}
+
+.course-hub-card--powerbi::before {
+  background: linear-gradient(90deg, #f59e0b, #fde68a);
+}
+
+.course-hub-card__top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.course-hub-card__icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.course-hub-card__top span {
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.course-hub-card h2 {
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+.course-hub-card p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.course-hub-list {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.course-hub-list div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.course-hub-list svg {
+  color: #16a34a;
+}
+
+@media (max-width: 768px) {
+  .course-hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-hub-card {
+    padding: 26px;
+  }
+}

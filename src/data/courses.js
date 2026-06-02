@@ -153,7 +153,6 @@ export const courses = {
     videoUrl: "https://www.youtube.com/watch?v=45wLevkbIB4",
     cover: images.powerbiCoverPlaceholder,
     whatsappMessage: "Hola, quiero más información del Curso de Power BI Nivel Élite",
-    editableNotice: "Contenido editable pendiente de validación final del cliente.",
     modules: [
       {
         title: "Módulo 01 - Fundamentos de Power BI",

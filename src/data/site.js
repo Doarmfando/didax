@@ -34,7 +34,7 @@ export const navigation = [
   { label: "Inicio", href: "/" },
   { label: "Quiénes somos", href: "/quienes-somos" },
   { label: "Empresas", href: "/empresas" },
-  { label: "Cursos", href: "/excel" },
+  { label: "Cursos", href: "/cursos" },
   { label: "Contacto", href: "/contacto" },
 ];
 

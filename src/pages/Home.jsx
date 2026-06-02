@@ -62,7 +62,7 @@ export default function Home() {
                 Comunícate ahora
                 <ArrowRight size={18} />
               </ButtonLink>
-              <ButtonLink to="/excel" variant="secondary">
+              <ButtonLink to="/cursos" variant="secondary">
                 Ver cursos
               </ButtonLink>
             </div>

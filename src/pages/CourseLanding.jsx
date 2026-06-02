@@ -35,12 +35,6 @@ export default function CourseLanding({ course }) {
         </div>
       </section>
 
-      {course.editableNotice ? (
-        <div className="container">
-          <div className="notice">{course.editableNotice}</div>
-        </div>
-      ) : null}
-
       <section className="section">
         <div className="container">
           <SectionHeader

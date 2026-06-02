@@ -5,6 +5,33 @@ import SocialIcon from "../components/SocialIcon.jsx";
 import { brand, whatsappUrl } from "../data/site.js";
 
 export default function Contact() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const values = Object.fromEntries(formData.entries());
+    const subject = "Nueva consulta desde didax.tech";
+    const body = [
+      "Hola DIDAX,",
+      "",
+      "Quiero solicitar informacion con estos datos:",
+      "",
+      `Nombres: ${values.nombres}`,
+      `Apellidos: ${values.apellidos}`,
+      `Numero: ${values.numero}`,
+      `Correo electronico: ${values.correo}`,
+      "",
+      "Consulta:",
+      values.consulta,
+      "",
+      "Enviado desde el formulario de contacto de didax.tech.",
+    ].join("\n");
+
+    window.location.href = `mailto:${brand.email}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <>
       <Seo
@@ -47,12 +74,7 @@ export default function Contact() {
             </ButtonLink>
           </aside>
 
-          <form
-            className="contact-form"
-            action={`mailto:${brand.email}`}
-            method="post"
-            encType="text/plain"
-          >
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-row">
               <label>
                 Nombres
@@ -82,8 +104,8 @@ export default function Contact() {
               <Send size={18} />
             </button>
             <p className="form-note">
-              Este formulario queda preparado sin backend. En Hostinger puede
-              conectarse luego a PHP, Formspree o un endpoint propio.
+              Al enviar se abrira tu cliente de correo con un mensaje formateado
+              para DIDAX.
             </p>
           </form>
         </div>

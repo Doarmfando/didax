@@ -68,19 +68,19 @@
   gap: 5px;
   width: 100%;
   margin-top: 28px;
-  padding: 18px;
+  justify-items: center;
   color: var(--paper);
-  background: rgba(255, 255, 255, 0.09);
-  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: var(--radius);
 }
 
 .metric-strip span {
   color: rgba(255, 255, 255, 0.72);
+  text-align: center;
 }
 
 .hero-tools {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 18px;
 }

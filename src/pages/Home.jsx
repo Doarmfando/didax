@@ -3,12 +3,15 @@ import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import PowerBiIcon from "../components/PowerBiIcon.jsx";
 import ButtonLink from "../components/ButtonLink.jsx";
-import Carousel from "../components/Carousel.jsx";
 import CtaBand from "../components/CtaBand.jsx";
 import SectionHeader from "../components/SectionHeader.jsx";
 import Seo from "../components/Seo.jsx";
 import { benefits, valueProps } from "../data/services.js";
 import { brand, whatsappUrl } from "../data/site.js";
+
+import imgExcel from "../../img/Principal-Excel1.jpg";
+import imgPowerBi from "../../img/Principal-PowerBI1.jpg";
+import imgAsesoria from "../../img/Principal-Asesoria1.jpg";
 
 const featured = [
   {
@@ -16,7 +19,7 @@ const featured = [
     label: "Detalle del curso",
     href: "/excel",
     accent: "green",
-    imageHint: "Aquí va imagen del curso Excel Nivel Elite",
+    image: imgExcel,
     text: "Domina Excel desde cero hasta nivel avanzado con una ruta práctica para automatizar procesos, gestionar datos y crear reportes de alto impacto.",
   },
   {
@@ -24,7 +27,7 @@ const featured = [
     label: "Detalle del curso",
     href: "/powerbi",
     accent: "yellow",
-    imageHint: "Aquí va imagen del curso Power BI Nivel Elite",
+    image: imgPowerBi,
     text: "Conecta fuentes, automatiza tableros interactivos y diseña dashboards gerenciales para convertir datos complejos en decisiones estratégicas.",
   },
   {
@@ -32,7 +35,7 @@ const featured = [
     label: "Para Empresas",
     href: "/empresas",
     accent: "orange",
-    imageHint: "Aquí va imagen de servicios a medida para empresas",
+    image: imgAsesoria,
     text: "Diseñamos soluciones personalizadas para automatizar procesos, corregir ineficiencias y transformar datos en herramientas de control.",
   },
 ];
@@ -92,11 +95,13 @@ export default function Home() {
             title="Rutas diseñadas para avanzar con criterio"
             text="Cursos y servicios enfocados en habilidades técnicas, productividad y resultados empresariales."
           />
-          <Carousel label="Cursos y servicios destacados" className="feature-carousel">
+          <div className="feature-grid">
             {featured.map((item) => {
               return (
                 <article className={`feature-card feature-card--${item.accent}`} key={item.title}>
-                  <div className="feature-image-placeholder">{item.imageHint}</div>
+                  <div className="feature-image">
+                    <img src={item.image} alt={item.title} loading="lazy" />
+                  </div>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
                   <Link to={item.href} className="text-link">
@@ -106,7 +111,7 @@ export default function Home() {
                 </article>
               );
             })}
-          </Carousel>
+          </div>
         </div>
       </section>
 

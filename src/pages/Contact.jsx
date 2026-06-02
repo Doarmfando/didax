@@ -103,10 +103,6 @@ export default function Contact() {
               Enviar
               <Send size={18} />
             </button>
-            <p className="form-note">
-              Al enviar se abrira tu cliente de correo con un mensaje formateado
-              para DIDAX.
-            </p>
           </form>
         </div>
       </section>

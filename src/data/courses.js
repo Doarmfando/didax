@@ -137,8 +137,8 @@ export const courses = {
     ],
     schedule: {
       start: "Consulte nuestro canal de WhatSapp",
-      days: "Consulte nuestro canal de WhatSapp",
-      hours: "Consulte nuestro canal de WhatSapp",
+      days: "Lunes, miércoles y viernes",
+      hours: "Desde las 20:00 hasta las 22:00 horas",
     },
     faqs: sharedFaqs,
   },
@@ -205,8 +205,8 @@ export const courses = {
     ],
     schedule: {
       start: "Consulte nuestro canal de WhatSapp",
-      days: "Consulte nuestro canal de WhatSapp ",
-      hours: "Consulte nuestro canal de WhatSapp",
+      days: "Martes, jueves y sábado",
+      hours: "Desde las 20:00 hasta las 22:00 horas",
     },
     faqs: sharedFaqs,
   },

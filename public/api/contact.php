@@ -57,14 +57,14 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'doarmfando@gmail.com';
-    $mail->Password   = 'lfsptlfmzhasdfia';
+    $mail->Username   = 'jmontenegro@didax.tech';
+    $mail->Password   = 'baltjfgfvwrimmgc';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
     $mail->CharSet    = 'UTF-8';
 
-    $mail->setFrom('doarmfando@gmail.com', 'DIDAX Web');
-    $mail->addAddress('doarmfando@gmail.com', 'Brando Armas');
+    $mail->setFrom('jmontenegro@didax.tech', 'DIDAX Web');
+    $mail->addAddress('jmontenegro@didax.tech', 'Julio Montenegro');
     $mail->addReplyTo($correo, "$nombres $apellidos");
 
     $mail->isHTML(true);

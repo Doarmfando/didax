@@ -30,6 +30,7 @@ if (file_exists($rl_file)) {
 file_put_contents($rl_file, $now);
 
 require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/email_template.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -68,22 +69,10 @@ try {
     $mail->addAddress('doarmfando@gmail.com', 'Brando Armas');
     $mail->addReplyTo($correo, "$nombres $apellidos");
 
+    $mail->isHTML(true);
     $mail->Subject = "Nueva consulta desde didax.tech — $nombres $apellidos";
-    $mail->Body    = implode("\n", [
-        "Hola DIDAX,",
-        "",
-        "Quiero solicitar información con estos datos:",
-        "",
-        "Nombres: $nombres",
-        "Apellidos: $apellidos",
-        "Número: $numero",
-        "Correo electrónico: $correo",
-        "",
-        "Consulta:",
-        $consulta,
-        "",
-        "Enviado desde el formulario de contacto de didax.tech.",
-    ]);
+    $mail->Body    = build_email_html($nombres, $apellidos, $numero, $correo, $consulta);
+    $mail->AltBody = "Nombres: $nombres $apellidos\nNúmero: $numero\nCorreo: $correo\n\nConsulta:\n$consulta";
 
     $mail->send();
     echo json_encode(['ok' => true, 'message' => 'Mensaje enviado correctamente.']);

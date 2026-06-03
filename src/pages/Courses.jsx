@@ -45,7 +45,7 @@ export default function Courses() {
       <section className="section">
         <div className="container">
           <SectionHeader
-            eyebrow="Rutas disponibles"
+            eyebrow="Cursos disponibles"
             title="Elige el curso que quieres dominar"
             text="Puedes iniciar con Excel, avanzar con Power BI o llevar ambos para fortalecer tu perfil profesional."
           />

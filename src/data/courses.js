@@ -4,37 +4,37 @@ const sharedFaqs = [
   {
     question: "¿Es seguro el pago? ¿Dan boleta o factura?",
     answer:
-      "Sí. El equipo confirma tu inscripción por WhatsApp y puede emitir el comprobante correspondiente según tus datos.",
+      "Somos una empresa formalmente constituida con RUC 20615366022, inscrita en Registros Públicos. Emitimos boleta o factura (con IGV ya incluido) según lo necesites para tu empresa o uso personal. Los pagos son vía pasarelas seguras (Niubiz) o transferencia directa a nuestra cuenta corriente: 310-7360564-0-42.",
   },
   {
     question: "¿El certificado tiene valor oficial?",
     answer:
-      "Recibirás un certificado emitido por DIDAX. Si necesitas requisitos específicos para tu empresa, consúltalo antes de inscribirte.",
+      "Entregamos un certificado a nombre de DIDAX con un código QR de verificación único. Esto garantiza a cualquier reclutador que realmente dominas las herramientas.",
   },
   {
     question: "¿Qué necesito para certificarme?",
     answer:
-      "Completar las sesiones, desarrollar las actividades prácticas y cumplir los criterios comunicados al iniciar el programa.",
+      "Nos tomamos muy en serio tu enseñanza. Para acceder a la Certificación DIDAX se desarrollan 4 entregables oficiales, cada uno con un peso de 25%, y la nota mínima de aprobación es 14 (en escala de 0 a 20). Las asistencias también son importantes: solo se permite un máximo de 35% de inasistencias (si necesitas justificar alguna, se coordina directamente con el docente).",
   },
   {
     question: "¿Me sirve para mi trabajo actual o es solo teoría?",
     answer:
-      "El enfoque es práctico, con casos aplicados a reportes, control, análisis y decisiones reales de trabajo.",
+      "Es 100% práctico. Trabajamos con bases de datos reales. El objetivo es que lo que aprendas un martes, lo apliques en tu oficina el miércoles.",
   },
   {
     question: "¿Qué pasa si no sé nada de Excel o Power BI?",
     answer:
-      "Puedes iniciar desde base cero. El programa avanza por módulos para construir una ruta clara de aprendizaje.",
+      "Sí puedes llevar la especialización. Nuestra metodología está diseñada para nivelar a todos en las primeras sesiones y escalar rápidamente hacia la automatización pro. No necesitas ser un experto previo, solo tener hambre de aprender.",
   },
   {
     question: "¿Las clases son grabadas o en vivo?",
     answer:
-      "Las clases son en vivo online y se contempla acceso a grabaciones para reforzar lo aprendido.",
+      "Son en vivo. Valoramos la interacción en tiempo real para resolver tus dudas en el acto, pero todas las sesiones se graban y se suben a tu aula virtual para que las repases de por vida.",
   },
   {
     question: "¿Qué es el asesoramiento gratis?",
     answer:
-      "Es el acompañamiento para resolver dudas del curso y orientar la aplicación práctica en tus casos de trabajo.",
+      "Es una mentoría casi personal para nuestros alumnos. Cuando no estamos en clases y tienes un problema, puedes coordinar con tu docente para que te ayude con cualquier duda de lo visto en clase. Solo debes coordinarlo previamente, preferiblemente por WhatsApp.",
   },
 ];
 
@@ -136,9 +136,9 @@ export const courses = {
       },
     ],
     schedule: {
-      start: "15/06/2026",
-      days: "Lunes, miércoles y viernes",
-      hours: "Desde las 20:00 hasta las 22:00 horas",
+      start: "Consulte nuestro canal de WhatSapp",
+      days: "Consulte nuestro canal de WhatSapp",
+      hours: "Consulte nuestro canal de WhatSapp",
     },
     faqs: sharedFaqs,
   },
@@ -204,9 +204,9 @@ export const courses = {
       },
     ],
     schedule: {
-      start: "Fecha por confirmar",
-      days: "Días por confirmar",
-      hours: "Horario por confirmar",
+      start: "Consulte nuestro canal de WhatSapp",
+      days: "Consulte nuestro canal de WhatSapp ",
+      hours: "Consulte nuestro canal de WhatSapp",
     },
     faqs: sharedFaqs,
   },

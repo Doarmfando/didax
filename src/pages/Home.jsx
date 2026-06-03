@@ -98,9 +98,9 @@ DIDAX impulsa a profesionales y empresas mediante formación práctica, junto co
             {featured.map((item) => {
               return (
                 <article className={`feature-card feature-card--${item.accent}`} key={item.title}>
-                  <div className="feature-image">
+                  <Link to={item.href} className="feature-image" tabIndex={-1} aria-hidden="true">
                     <img src={item.image} alt={item.title} loading="lazy" />
-                  </div>
+                  </Link>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
                   <Link to={item.href} className="text-link">
